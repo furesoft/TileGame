@@ -5,9 +5,9 @@ namespace TileGame.Components;
 
 public class TextureComponent : IComponent
 {
-    public TextureComponent(Texture2D texture)
+    public TextureComponent(string name)
     {
-        Texture = texture;
+        Texture = IComponent.Content.Load<Texture2D>(name);
     }
 
     public Texture2D Texture { get; set; }

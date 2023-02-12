@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended.Screens;
 using TileGame.Core;
 using TileGame.Screens;
+using GameScreen = TileGame.Screens.GameScreen;
 
 namespace TileGame;
 
@@ -19,12 +20,13 @@ public class Game1 : Game
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
         _screenManager = new ScreenManager();
+        IComponent.Content = Content;
         Components.Add(_screenManager);
     }
 
     protected override void Initialize()
     {
-        var menuScreen = new MainMenuScreen(this);
+        var menuScreen = new GameScreen(this);
         _screenManager.LoadScreen(menuScreen);
 
         base.Initialize();

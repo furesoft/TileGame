@@ -4,12 +4,10 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Jetbrains/RiderProjects/TileGame/Content/Sensation_0.png</File>
-    <File>D:/Jetbrains/RiderProjects/TileGame/Content/Sensation.fnt</File>
-    <File>D:/Jetbrains/RiderProjects/TileGame/Content/tile.png</File>
+    <File>C:/Users/chris/RiderProjects/TileGame/Content/player.png</File>
+    <File>C:/Users/chris/RiderProjects/TileGame/Content/tile.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

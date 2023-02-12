@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Jetbrains\\RiderProjects\\TileGame\\TileGame.csproj": {}
+    "C:\\Users\\chris\\RiderProjects\\TileGame\\TileGame.csproj": {}
   },
   "projects": {
-    "D:\\Jetbrains\\RiderProjects\\TileGame\\TileGame.csproj": {
+    "C:\\Users\\chris\\RiderProjects\\TileGame\\TileGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Jetbrains\\RiderProjects\\TileGame\\TileGame.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\RiderProjects\\TileGame\\TileGame.csproj",
         "projectName": "TileGame",
-        "projectPath": "D:\\Jetbrains\\RiderProjects\\TileGame\\TileGame.csproj",
-        "packagesPath": "D:\\.nuget",
-        "outputPath": "D:\\Jetbrains\\RiderProjects\\TileGame\\obj\\",
+        "projectPath": "C:\\Users\\chris\\RiderProjects\\TileGame\\TileGame.csproj",
+        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chris\\RiderProjects\\TileGame\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\c.anders\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/avalonia-ci/api/v2": {}
         },
         "frameworks": {
           "net7.0": {
@@ -44,10 +50,6 @@
               "target": "Package",
               "version": "[3.8.1.303, )"
             },
-            "MonoGame.Extended": {
-              "target": "Package",
-              "version": "[3.8.0, )"
-            },
             "MonoGame.Extended.Animations": {
               "target": "Package",
               "version": "[3.7.0, )"
@@ -64,15 +66,7 @@
               "target": "Package",
               "version": "[3.8.0, )"
             },
-            "MonoGame.Extended.Gui": {
-              "target": "Package",
-              "version": "[3.8.0, )"
-            },
             "MonoGame.Extended.Input": {
-              "target": "Package",
-              "version": "[3.8.0, )"
-            },
-            "MonoGame.Extended.NuclexGui": {
               "target": "Package",
               "version": "[3.8.0, )"
             },
@@ -105,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "D:\\dotnet-sdk-7.0.102-win-x64\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -10,11 +10,11 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:D:\.nuget\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
+/reference:F:\\MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Sensation_0.png
+#begin player.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -24,12 +24,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sensation_0.png
-
-#begin Sensation.fnt
-/importer:BitmapFontImporter
-/processor:BitmapFontProcessor
-/build:Sensation.fnt
+/build:player.png
 
 #begin tile.png
 /importer:TextureImporter

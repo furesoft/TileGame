@@ -23,18 +23,33 @@ public class GameScreen : Screen
 
     public override void Initialize()
     {
-        CreateTile(10, 10);
-        CreateTile(150, 150);
+        var tiles = CreateGameObject("tiles");
+        CreateTile(10, 10, tiles);
+        CreateTile(150, 150, tiles);
+        
+        CreatePlayer(tiles);
     }
 
-    private void CreateTile(int x, int y)
+    private void CreateTile(int x, int y, GameObject parent)
     {
-        var tile = CreateGameObject("Tile1");
-        tile.Position = new Vector2(x, y);
+        var tile = CreateGameObject("Tile");
+        tile.Position = new (x, y);
         tile.Size = new Size(100, 100);
-        tile.AddComponent(new TextureComponent(IComponent.Content.Load<Texture2D>("Tile")));
+        tile.AddComponent(new TextureComponent("tile"));
         tile.AddComponent<TileRenderer>();
         tile.AddComponent<Selectable>();
+        
+        tile.SetParent(parent);
+    }
+
+    private void CreatePlayer(GameObject tiles)
+    {
+        var player = CreateGameObject("player");
+        player.Size = new(50, 50);
+        player.AddComponent<PlayerMovement>();
+        player.AddComponent(new TextureComponent("player"));
+        player.AddComponent<TextureRenderer>();
+        player.SetParent(tiles);
     }
 
     private GameObject CreateGameObject(string name)

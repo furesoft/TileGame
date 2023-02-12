@@ -40,11 +40,14 @@ public class Selectable : IUpdatable
 
                 Color[] pixels = new Color[texture.Height * texture.Width];
                 texture.GetData(pixels);
-                
-                var index = mouseState.X + (mouseState.Y * texture.Width);
-                var color = pixels[index % pixels.Length]; //ToDo: fix selection
 
-                IsSelected = color.A == 255;
+                var mouseVector = new Vector2(mouseState.Position.X, mouseState.Position.Y);
+                var relativePosition = mouseVector - _gameObject.Position;
+                var index = (int)((relativePosition.Y/_gameObject.Size.Height*texture.Height)* texture.Width + (relativePosition.X/_gameObject.Size.Width*texture.Width) );
+                
+                var color = pixels[index];
+
+                IsSelected = color.A >= 200;
             }
             else
             {

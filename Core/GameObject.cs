@@ -10,13 +10,13 @@ namespace TileGame.Core;
 public sealed class GameObject
 {
 
-    public string Name { get; private set; }
+    public string Name { get; }
     public Vector2 Position { get; set; }
     public Size Size { get; set; }
     
     
     private GameObject _parent;
-    private List<GameObject> _children;
+    public List<GameObject> Children { get; set; }
 
     private List<IComponent> _comps;
     private List<IUpdatable> _updateableComps;
@@ -30,7 +30,7 @@ public sealed class GameObject
 
     public GameObject(string name)
     {
-        _children = new List<GameObject>();
+        Children = new List<GameObject>();
         _comps = new List<IComponent>();
         _updateableComps = new List<IUpdatable>();
         _renderableComps = new List<IRenderable>();
@@ -44,10 +44,10 @@ public sealed class GameObject
     public void SetParent(GameObject parent)
     {
         if (_parent != null)
-            _parent._children.Remove(this);
+            _parent.Children.Remove(this);
         _parent = parent;
         if (_parent != null)
-            _parent._children.Add(this);
+            _parent.Children.Add(this);
     }
 
     public GameObject GetRootParent()
@@ -69,7 +69,7 @@ public sealed class GameObject
     {
         RemoveAllComponents();
 
-        foreach (var c in _children)
+        foreach (var c in Children)
             c.Destroy();
     }
 

@@ -10,7 +10,7 @@ public class TileRenderer : IRenderable
     
     public void Initialize()
     {
-        _gameObject.GetComponent<TextureComponent>().Texture = IComponent.Content.Load<Texture2D>("tile");
+      
     }
 
     public TileRenderer(GameObject gameObject)

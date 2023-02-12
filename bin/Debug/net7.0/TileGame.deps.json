@@ -9,14 +9,11 @@
       "TileGame/1.0.0": {
         "dependencies": {
           "MonoGame.Content.Builder.Task": "3.8.1.303",
-          "MonoGame.Extended": "3.8.0",
           "MonoGame.Extended.Animations": "3.7.0",
           "MonoGame.Extended.Collisions": "3.8.0",
           "MonoGame.Extended.Content.Pipeline": "3.8.0",
           "MonoGame.Extended.Graphics": "3.8.0",
-          "MonoGame.Extended.Gui": "3.8.0",
           "MonoGame.Extended.Input": "3.8.0",
-          "MonoGame.Extended.NuclexGui": "3.8.0",
           "MonoGame.Extended.Tiled": "3.8.0",
           "MonoGame.Extended.Tweening": "3.8.0",
           "MonoGame.Framework.DesktopGL": "3.8.1.303"
@@ -86,36 +83,12 @@
           }
         }
       },
-      "MonoGame.Extended.Gui/3.8.0": {
-        "dependencies": {
-          "MonoGame.Extended": "3.8.0",
-          "MonoGame.Extended.Input": "3.8.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/MonoGame.Extended.Gui.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "MonoGame.Extended.Input/3.8.0": {
         "dependencies": {
           "MonoGame.Extended": "3.8.0"
         },
         "runtime": {
           "lib/netstandard2.0/MonoGame.Extended.Input.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "MonoGame.Extended.NuclexGui/3.8.0": {
-        "dependencies": {
-          "MonoGame.Extended": "3.8.0",
-          "MonoGame.Extended.Input": "3.8.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/MonoGame.Extended.NuclexGui.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -259,26 +232,12 @@
       "path": "monogame.extended.graphics/3.8.0",
       "hashPath": "monogame.extended.graphics.3.8.0.nupkg.sha512"
     },
-    "MonoGame.Extended.Gui/3.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Q40QIqEsmX3+tpLqENswMRIQ1FBf/3llJDGk3zTStdb2ejs4LGYWNeBIEbGqj3anfecT4qgNnJKCIaL61Cmx7A==",
-      "path": "monogame.extended.gui/3.8.0",
-      "hashPath": "monogame.extended.gui.3.8.0.nupkg.sha512"
-    },
     "MonoGame.Extended.Input/3.8.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-90RtzI6N+RCGHolI/yTwGT47vqSyr+IEe+yKxzm4/euc8rDVnbAwz4lRifkAEdHx29X3apD0Ui5ve0C/7yO7wQ==",
       "path": "monogame.extended.input/3.8.0",
       "hashPath": "monogame.extended.input.3.8.0.nupkg.sha512"
-    },
-    "MonoGame.Extended.NuclexGui/3.8.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-TKsfUOfFPmP9a4oX9WgCt+xSEoFr99Zq/v3DO4yihweiqJsQ+xwZZnzaKor5ehXairez51qru8U2+1XlMAtq0w==",
-      "path": "monogame.extended.nuclexgui/3.8.0",
-      "hashPath": "monogame.extended.nuclexgui.3.8.0.nupkg.sha512"
     },
     "MonoGame.Extended.Tiled/3.8.0": {
       "type": "package",
