@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using TileGame.Core;
 
 namespace TileGame.Components;
@@ -25,6 +26,6 @@ public class PlayerMovement : Component
         TileIndex++;
         TileIndex %= tiles.Length;
         
-        GameObject.Position = tiles[TileIndex].Position + childCenter;
+        GameObject.Position = tiles[TileIndex].Position;
     }
 }

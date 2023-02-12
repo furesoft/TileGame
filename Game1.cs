@@ -20,8 +20,6 @@ public class Game1 : Game
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
         Component.Content = Content;
-        
-        
     }
     
     private void CreateTile(int x, int y, GameObject parent)
@@ -35,18 +33,28 @@ public class Game1 : Game
         tile.SetParent(parent);
     }
 
-    private void CreatePlayer(GameObject tiles, Color color)
+    private void CreatePlayer(GameObject tiles, Color color, int startIndex)
     {
         var player = CreateGameObject("player");
         player.Size = new(50, 50);
         player.AddComponent(new TextureComponent("player"));
         player.AddComponent(new TextureRenderer(color));
-        player.AddComponent<Selectable>();
         player.AddComponent<PlayerMovement>();
-        
+        player.AddComponent<Selectable>();
+
+        var movement = player.GetComponent<PlayerMovement>();
+        movement.TileIndex = startIndex;
+
+        var selectable = player.GetComponent<Selectable>();
+        selectable.OnSelect += so =>
+        {
+            selectedPlayer = so;
+        };
+
         player.SetParent(tiles);
     }
 
+    private GameObject selectedPlayer;
     private void CreateDice()
     {
         var dice = CreateGameObject("dice");
@@ -57,22 +65,10 @@ public class Game1 : Game
         var diceComponent = new DiceComponent();
         diceComponent.OnDiceRoll += (num) =>
         {
-            var players = _currentScene.Objects.Where(_ => _.Name == "player");
+            var movement = selectedPlayer.GetComponent<PlayerMovement>();
 
-            foreach (var player in players)
-            {
-                var selection = player.GetComponent<Selectable>();
-
-                if (!selection.IsSelected)
-                {
-                    continue;
-                }
-
-                var movement = player.GetComponent<PlayerMovement>();
-
-                movement.TileIndex += num;
-                movement.RefreshPosition();
-            }
+            movement.TileIndex += num;
+            movement.RefreshPosition();
         };
         
         dice.AddComponent(diceComponent);
@@ -105,8 +101,8 @@ public class Game1 : Game
             CreateTile(i+1 * (_currentScene.Objects.Count + 210*i), 200, tiles);
         }
 
-        CreatePlayer(tiles, Color.Red);
-        CreatePlayer(tiles, Color.Blue);
+        CreatePlayer(tiles, Color.Red,0);
+        CreatePlayer(tiles, Color.Blue,1);
 
         CreateDice();
         

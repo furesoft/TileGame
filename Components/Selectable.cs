@@ -1,7 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using MonoGame.Extended;
 using TileGame.Core;
 
 namespace TileGame.Components;
@@ -9,6 +8,8 @@ namespace TileGame.Components;
 public class Selectable : Component
 {
     public bool IsSelected { get; private set; }
+
+    public event Action<GameObject> OnSelect;
 
     public override void Update(GameTime gameTime)
     {
@@ -18,7 +19,6 @@ public class Selectable : Component
         {
             if (!GameObject.IsMouseOverGameObject())
             {
-                IsSelected = false;
                 return;
             }
 
@@ -35,6 +35,10 @@ public class Selectable : Component
             var color = pixels[index % pixels.Length];
 
             IsSelected = color.A >= 200;
+
+            if (!IsSelected) return;
+            
+            OnSelect?.Invoke(GameObject);
         }
     }
 }
