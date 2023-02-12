@@ -57,10 +57,14 @@ public class GameScreen : Screen
         var go = new GameObject(name);
 
         _gameObjects.Add(go);
-        
-        go.Initialize();
-        
+
         return go;
+    }
+
+    public override void LoadContent()
+    {
+        foreach (var entity in _gameObjects)
+            entity.Initialize();
     }
 
     public override void Update(GameTime gameTime)
