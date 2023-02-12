@@ -1,0 +1,12 @@
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\bin\Debug\net7.0\TileGame.Core.deps.json
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\bin\Debug\net7.0\TileGame.Core.dll
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\bin\Debug\net7.0\TileGame.Core.pdb
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\TileGame.Core.csproj.AssemblyReference.cache
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\TileGame.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\TileGame.Core.AssemblyInfoInputs.cache
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\TileGame.Core.AssemblyInfo.cs
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\TileGame.Core.csproj.CoreCompileInputs.cache
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\TileGame.Core.dll
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\refint\TileGame.Core.dll
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\TileGame.Core.pdb
+C:\Users\chris\RiderProjects\TileGame\TileGame.Core\obj\Debug\net7.0\ref\TileGame.Core.dll

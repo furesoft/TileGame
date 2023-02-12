@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/chris/RiderProjects/TileGame/Content/dice.png","C:/Users/chris/RiderProjects/TileGame/Content/bin/DesktopGL/dice.xnb","TextureProcessor","Texture2DContent",641,10085,0,2210569
+"C:/Users/chris/RiderProjects/TileGame/Content/player.png","C:/Users/chris/RiderProjects/TileGame/Content/bin/DesktopGL/player.xnb","TextureProcessor","Texture2DContent",770,1845,0,0050003
