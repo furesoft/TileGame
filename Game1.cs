@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Linq;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MonoGame.Extended.Screens;
+using MonoGame.Extended;
+using TileGame.Components;
 using TileGame.Core;
-using TileGame.Screens;
-using GameScreen = TileGame.Screens.GameScreen;
 
 namespace TileGame;
 
@@ -12,33 +12,105 @@ public class Game1 : Game
 {
     public static GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-    public readonly ScreenManager _screenManager;
+    private Scene _currentScene = new();
 
     public Game1()
     {
-        _graphics = new GraphicsDeviceManager(this);
+        _graphics = new(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
-        _screenManager = new ScreenManager();
-        IComponent.Content = Content;
-        Components.Add(_screenManager);
+        Component.Content = Content;
+        
+        
+    }
+    
+    private void CreateTile(int x, int y, GameObject parent)
+    {
+        var tile = CreateGameObject("Tile");
+        tile.Position = new (x, y);
+        tile.Size = new Size(100, 100);
+        tile.AddComponent(new TextureComponent("tile"));
+        tile.AddComponent<TextureRenderer>();
+        
+        tile.SetParent(parent);
     }
 
-    protected override void Initialize()
+    private void CreatePlayer(GameObject tiles, Color color)
     {
-        var menuScreen = new GameScreen(this);
-        _screenManager.LoadScreen(menuScreen);
+        var player = CreateGameObject("player");
+        player.Size = new(50, 50);
+        player.AddComponent(new TextureComponent("player"));
+        player.AddComponent(new TextureRenderer(color));
+        player.AddComponent<Selectable>();
+        player.AddComponent<PlayerMovement>();
+        
+        player.SetParent(tiles);
+    }
 
-        base.Initialize();
+    private void CreateDice()
+    {
+        var dice = CreateGameObject("dice");
+        dice.Size = new(50, 50);
+        dice.Position = new Vector2(GraphicsDevice.Viewport.Width -75, 25);
+        dice.AddComponent(new TextureComponent("dice"));
+
+        var diceComponent = new DiceComponent();
+        diceComponent.OnDiceRoll += (num) =>
+        {
+            var players = _currentScene.Objects.Where(_ => _.Name == "player");
+
+            foreach (var player in players)
+            {
+                var selection = player.GetComponent<Selectable>();
+
+                if (!selection.IsSelected)
+                {
+                    continue;
+                }
+
+                var movement = player.GetComponent<PlayerMovement>();
+
+                movement.TileIndex += num;
+                movement.RefreshPosition();
+            }
+        };
+        
+        dice.AddComponent(diceComponent);
+    }
+
+    private GameObject CreateGameObject(string name)
+    {
+        var go = new GameObject(name);
+
+        _currentScene.Objects.Add(go);
+
+        return go;
     }
 
     protected override void LoadContent()
     {
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
-        
-        _screenManager.Initialize();
+        _spriteBatch = new(GraphicsDevice);
 
-        IComponent.Content = Content;
+        Component.Content = Content;
+        
+        var tiles = CreateGameObject("tiles");
+
+        for (int i = 0; i < 4; i++)
+        {
+            CreateTile(i+1 * (_currentScene.Objects.Count + 210*i), 10, tiles);
+        }
+        
+        for (int i = 0; i < 4; i++)
+        {
+            CreateTile(i+1 * (_currentScene.Objects.Count + 210*i), 200, tiles);
+        }
+
+        CreatePlayer(tiles, Color.Red);
+        CreatePlayer(tiles, Color.Blue);
+
+        CreateDice();
+        
+        _currentScene.Initialize();
     }
 
     protected override void Update(GameTime gameTime)
@@ -46,17 +118,14 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-       _screenManager.Update(gameTime);
-
-        base.Update(gameTime);
+        _currentScene.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        _screenManager.Draw(gameTime);
-        
-        base.Draw(gameTime);
+        var spriteBatch = new SpriteBatch(GraphicsDevice);
+        _currentScene.Draw(spriteBatch, gameTime);
     }
 }

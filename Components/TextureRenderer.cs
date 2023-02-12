@@ -4,32 +4,26 @@ using TileGame.Core;
 
 namespace TileGame.Components;
 
-public class TextureRenderer : IRenderable
+public class TextureRenderer : Component
 {
-    private GameObject _gameObject;
+    private readonly Color _color;
 
-    public TextureRenderer(GameObject gameObject)
+    public TextureRenderer()
     {
-        this._gameObject = gameObject;
+        _color = Color.White;
+    }
+
+    public TextureRenderer(Color color)
+    {
+        _color = color;
     }
     
-    public void Initialize()
-    {
-        
-    }
-
-    public void Start()
-    {
-        
-    }
-
-    public bool Visible { get; } = true;
-    public void Render(SpriteBatch sb, GameTime gameTime)
+    public override void Render(SpriteBatch sb, GameTime gameTime)
     {
         sb.Begin();
         
-        var texture = _gameObject.GetComponent<TextureComponent>().Texture;
-        sb.Draw(texture, _gameObject.Bounds, Color.White);
+        var texture = GameObject.GetComponent<TextureComponent>().Texture;
+        sb.Draw(texture, GameObject.Bounds, _color);
 
         sb.End();
     }

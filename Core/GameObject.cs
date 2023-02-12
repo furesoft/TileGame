@@ -20,25 +20,14 @@ public sealed class GameObject
     private GameObject _parent;
     public List<GameObject> Children { get; set; }
 
-    private List<IComponent> _comps;
-    private List<IUpdatable> _updateableComps;
-    private List<IRenderable> _renderableComps;
-
-    private List<IComponent> _tempComps;
-    private List<IUpdatable> _tempUpdateableComps;
-    private List<IRenderable> _tempRenderableComps;
+    private List<Component> _comps;
 
     private bool _isInitialized;
 
     public GameObject(string name)
     {
         Children = new List<GameObject>();
-        _comps = new List<IComponent>();
-        _updateableComps = new List<IUpdatable>();
-        _renderableComps = new List<IRenderable>();
-        _tempComps = new List<IComponent>();
-        _tempUpdateableComps = new List<IUpdatable>();
-        _tempRenderableComps = new List<IRenderable>();
+        _comps = new List<Component>();
 
         Name = name;
     }
@@ -79,13 +68,10 @@ public sealed class GameObject
     {
         if (_isInitialized)
             return;
-
-        _tempComps.Clear();
-        _tempComps.AddRange(_comps);
-
-        foreach (var comp in _tempComps)
+        
+        foreach (var comp in _comps)
             comp.Initialize();
-        foreach (var comp in _tempComps)
+        foreach (var comp in _comps)
             comp.Start();
 
         _isInitialized = true;
@@ -100,41 +86,31 @@ public sealed class GameObject
 
     public void Update(GameTime gameTime)
     {
-        _tempUpdateableComps.Clear();
-        _tempUpdateableComps.AddRange(_updateableComps);
-        for (int i = 0; i < _tempUpdateableComps.Count; i++)
-            if (_tempUpdateableComps[i].Enabled)
-                _tempUpdateableComps[i].Update(gameTime);
+        for (int i = 0; i < _comps.Count; i++)
+            if (_comps[i].Enabled)
+                _comps[i].Update(gameTime);
     }
 
     public void Draw(SpriteBatch sb, GameTime gameTime)
     {
-        _tempRenderableComps.Clear();
-        _tempRenderableComps.AddRange(_renderableComps);
-        for (int i = 0; i < _tempRenderableComps.Count; i++)
-            if (_tempRenderableComps[i].Visible)
-                _tempRenderableComps[i].Render(sb, gameTime);
+        for (int i = 0; i < _comps.Count; i++)
+            if (_comps[i].Visible)
+                _comps[i].Render(sb, gameTime);
     }
 
     public void AddComponent<T>()
-        where T : IComponent
+        where T : Component, new()
     {
-        AddComponent((T)Activator.CreateInstance(typeof(T), this));
+        var obj = new T();
+        obj.GameObject = this;
+        
+        AddComponent(obj);
     }
     
-    public void AddComponent(IComponent comp)
+    public void AddComponent(Component comp)
     {
+        comp.GameObject = this;
         _comps.Add(comp);
-
-        if (comp is IUpdatable updateable)
-        {
-            _updateableComps.Add(updateable);
-        }
-
-        if (comp is IRenderable renderable)
-        {
-            _renderableComps.Add(renderable);
-        }
 
         if (_isInitialized)
         {
@@ -143,7 +119,7 @@ public sealed class GameObject
         }
     }
 
-    public T GetComponent<T>() where T : class, IComponent
+    public T GetComponent<T>() where T : Component
     {
         foreach (var comp in _comps)
         {
@@ -153,25 +129,12 @@ public sealed class GameObject
         return null;
     }
 
-    public bool RemoveComponent(IComponent comp)
+    public bool RemoveComponent(Component comp)
     {
-        if (_comps.Remove(comp))
-        {
-            if (comp is IUpdatable updateable)
-            {
-                _updateableComps.Remove(updateable);
-            }
-
-            if (comp is IRenderable renderable)
-            {
-                _renderableComps.Remove(renderable);
-            }
-            return true;
-        }
-        return false;
+        return _comps.Remove(comp);
     }
 
-    public void RemoveComponents<T>() where T : IComponent
+    public void RemoveComponents<T>() where T : Component
     {
         foreach (var comp in Enumerable.Reverse(_comps))
         {
@@ -182,8 +145,6 @@ public sealed class GameObject
 
     public void RemoveAllComponents()
     {
-        // 왜 뒤집어서 빼야 하느냐 ??
-        // 그것은 제 자서전에 나와있습니다 ㅎ
         foreach (var comp in Enumerable.Reverse(_comps))
             RemoveComponent(comp);
     }

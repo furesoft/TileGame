@@ -4,34 +4,16 @@ using TileGame.Core;
 
 namespace TileGame.Components;
 
-public class TileRenderer : IRenderable
+public class TileRenderer : Component
 {
-    private readonly GameObject _gameObject;
-    
-    public void Initialize()
+    public override void Render(SpriteBatch sb, GameTime gameTime)
     {
-      
-    }
-
-    public TileRenderer(GameObject gameObject)
-    {
-        _gameObject = gameObject;
-    }
-
-    public void Start()
-    {
-        
-    }
-
-    public bool Visible { get; } = true;
-    public void Render(SpriteBatch sb, GameTime gameTime)
-    {
-        var selectable = _gameObject.GetComponent<Selectable>();
+        var selectable = GameObject.GetComponent<Selectable>();
 
         var color = selectable.IsSelected ? Color.White : Color.Black;
 
         sb.Begin();
-        sb.Draw(_gameObject.GetComponent<TextureComponent>().Texture, _gameObject.Bounds, color);
+        sb.Draw(GameObject.GetComponent<TextureComponent>().Texture, GameObject.Bounds, color);
         sb.End();
     }
 }

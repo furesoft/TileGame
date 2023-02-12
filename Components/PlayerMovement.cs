@@ -1,56 +1,30 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Linq;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using TileGame.Core;
 
 namespace TileGame.Components;
 
-public class PlayerMovement : IComponent, IUpdatable
+public class PlayerMovement : Component
 {
-    private GameObject gameObject;
-
-    public PlayerMovement(GameObject gameObject)
+    public override void Initialize()
     {
-        this.gameObject = gameObject;
+        RefreshPosition();
     }
 
-    public void Initialize()
+    public int TileIndex { get; set; }
+    public void RefreshPosition()
     {
-        var parent = gameObject.GetRootParent();
+        var playerTexture = GameObject.GetComponent<TextureComponent>().Texture;
         
-        SetPosition(parent.Children[0]);
-    }
+        var childCenter = new Vector2(GameObject.Size.Width / 2 - playerTexture.Width / 2,
+            GameObject.Size.Height / 2 - playerTexture.Height / 2);
 
-    public void Start()
-    {
+        var tiles = GameObject.GetRootParent().Children.Where(_=> _.Name == "Tile").ToArray();
+
+        TileIndex++;
+        TileIndex %= tiles.Length;
         
-    }
-
-    public bool Enabled { get; } = true;
-    public void Update(GameTime gameTime)
-    {
-        var parent = gameObject.GetRootParent();
-
-        foreach (var child in parent.Children)
-        {
-            if (child.Name == "Tile")
-            {
-                var selectable = child.GetComponent<Selectable>();
-
-                if (selectable.IsSelected)
-                {
-                    SetPosition(child);
-                }
-            }
-        }
-    }
-
-    private void SetPosition(GameObject child)
-    {
-        var playerTexture = gameObject.GetComponent<TextureComponent>().Texture;
-        
-        var childCenter = new Vector2(child.Size.Width / 2 - playerTexture.Width / 2,
-            child.Size.Height / 2 - playerTexture.Height / 2);
-
-        gameObject.Position = child.Position + childCenter;
+        GameObject.Position = tiles[TileIndex].Position + childCenter;
     }
 }
