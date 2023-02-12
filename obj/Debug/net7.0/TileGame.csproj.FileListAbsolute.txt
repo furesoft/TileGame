@@ -74,3 +74,5 @@ C:\Users\chris\RiderProjects\TileGame\obj\Debug\net7.0\TileGame.pdb
 C:\Users\chris\RiderProjects\TileGame\obj\Debug\net7.0\TileGame.genruntimeconfig.cache
 C:\Users\chris\RiderProjects\TileGame\obj\Debug\net7.0\ref\TileGame.dll
 C:\Users\chris\RiderProjects\TileGame\bin\Debug\net7.0\Content\player.xnb
+C:\Users\chris\RiderProjects\TileGame\bin\Debug\net7.0\Content\dice.xnb
+C:\Users\chris\RiderProjects\TileGame\bin\Debug\net7.0\Content\Arial.xnb

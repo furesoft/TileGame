@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended;
 
 namespace TileGame.Core;
@@ -13,7 +14,8 @@ public sealed class GameObject
     public string Name { get; }
     public Vector2 Position { get; set; }
     public Size Size { get; set; }
-    
+
+    public Rectangle Bounds => new Rectangle((int) Position.X, (int) Position.Y, Size.Width, Size.Height);
     
     private GameObject _parent;
     public List<GameObject> Children { get; set; }
@@ -87,6 +89,13 @@ public sealed class GameObject
             comp.Start();
 
         _isInitialized = true;
+    }
+
+    public bool IsMouseOverGameObject()
+    {
+        var mouseState = Mouse.GetState();
+
+        return Bounds.Contains(mouseState.Position);
     }
 
     public void Update(GameTime gameTime)

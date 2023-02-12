@@ -29,7 +29,7 @@ public class TextureRenderer : IRenderable
         sb.Begin();
         
         var texture = _gameObject.GetComponent<TextureComponent>().Texture;
-        sb.Draw(texture, new Rectangle((int)_gameObject.Position.X, (int)_gameObject.Position.Y, _gameObject.Size.Width, _gameObject.Size.Height), Color.White);
+        sb.Draw(texture, _gameObject.Bounds, Color.White);
 
         sb.End();
     }

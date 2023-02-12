@@ -31,7 +31,7 @@ public class TileRenderer : IRenderable
         var color = selectable.IsSelected ? Color.White : Color.Black;
 
         sb.Begin();
-        sb.Draw(_gameObject.GetComponent<TextureComponent>().Texture, new Rectangle((int)_gameObject.Position.X, (int)_gameObject.Position.Y, _gameObject.Size.Width, _gameObject.Size.Height), color);
+        sb.Draw(_gameObject.GetComponent<TextureComponent>().Texture, _gameObject.Bounds, color);
         sb.End();
     }
 }

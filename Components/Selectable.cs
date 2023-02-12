@@ -33,8 +33,7 @@ public class Selectable : IUpdatable
         
         if (mouseState.LeftButton == ButtonState.Pressed)
         {
-            if (new Rectangle(new Point((int) _gameObject.Position.X, (int) _gameObject.Position.Y), _gameObject.Size)
-                .Contains(new Point2(mouseState.X, mouseState.Y)))
+            if (_gameObject.IsMouseOverGameObject())
             {
                 var texture = _gameObject.GetComponent<TextureComponent>().Texture;
 

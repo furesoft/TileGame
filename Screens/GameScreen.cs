@@ -28,6 +28,7 @@ public class GameScreen : Screen
         CreateTile(150, 150, tiles);
         
         CreatePlayer(tiles);
+        CreateDice();
     }
 
     private void CreateTile(int x, int y, GameObject parent)
@@ -50,6 +51,15 @@ public class GameScreen : Screen
         player.AddComponent(new TextureComponent("player"));
         player.AddComponent<TextureRenderer>();
         player.SetParent(tiles);
+    }
+
+    private void CreateDice()
+    {
+        var dice = CreateGameObject("dice");
+        dice.Size = new(50, 50);
+        dice.Position = new Vector2(_game.GraphicsDevice.Viewport.Width -75, 25);
+        dice.AddComponent(new TextureComponent("dice"));
+        dice.AddComponent<DiceComponent>();
     }
 
     private GameObject CreateGameObject(string name)
