@@ -5,10 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileGame", "TileGame\TileGame.csproj", "{0E512012-ECC5-47A3-8A42-85ACB9841E0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileGame.Core", "TileGame.Core\TileGame.Core.csproj", "{2C98D7CF-6B3F-4CC7-B384-8621169B1039}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileGame.GeneralComponents", "TileGame.GeneralComponents\TileGame.GeneralComponents.csproj", "{53428F98-C94C-4F8E-A3CA-0C90181D7BA1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,13 +18,5 @@ Global
 		{0E512012-ECC5-47A3-8A42-85ACB9841E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E512012-ECC5-47A3-8A42-85ACB9841E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E512012-ECC5-47A3-8A42-85ACB9841E0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C98D7CF-6B3F-4CC7-B384-8621169B1039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C98D7CF-6B3F-4CC7-B384-8621169B1039}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C98D7CF-6B3F-4CC7-B384-8621169B1039}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C98D7CF-6B3F-4CC7-B384-8621169B1039}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53428F98-C94C-4F8E-A3CA-0C90181D7BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53428F98-C94C-4F8E-A3CA-0C90181D7BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53428F98-C94C-4F8E-A3CA-0C90181D7BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53428F98-C94C-4F8E-A3CA-0C90181D7BA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

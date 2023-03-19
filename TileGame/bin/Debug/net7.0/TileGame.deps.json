@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "TileGame/1.0.0": {
         "dependencies": {
+          "Furesoft.Core": "1.0.7",
           "MonoGame.Content.Builder.Task": "3.8.1.303",
           "MonoGame.Extended.Animations": "3.7.0",
           "MonoGame.Extended.Collisions": "3.8.0",
@@ -16,17 +17,29 @@
           "MonoGame.Extended.Tiled": "3.8.0",
           "MonoGame.Extended.Tweening": "3.8.0",
           "MonoGame.Framework.DesktopGL": "3.8.1.303",
-          "TileGame.Core": "1.0.0",
-          "TileGame.GeneralComponents": "1.0.0"
+          "TileGame.Core": "1.0.0"
         },
         "runtime": {
           "TileGame.dll": {}
         }
       },
+      "Furesoft.Core/1.0.7": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "lib/net7.0/Furesoft.Core.dll": {
+            "assemblyVersion": "1.0.7.0",
+            "fileVersion": "1.0.7.0"
+          }
+        }
+      },
+      "Microsoft.CSharp/4.7.0": {},
       "MonoGame.Content.Builder.Task/3.8.1.303": {},
       "MonoGame.Extended/3.8.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/MonoGame.Extended.dll": {
@@ -152,29 +165,12 @@
           }
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.3": {
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.3.23909"
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
           }
-        }
-      },
-      "TileGame.Core/1.0.0": {
-        "dependencies": {
-          "MonoGame.Extended": "3.8.0",
-          "MonoGame.Framework.DesktopGL": "3.8.1.303"
-        },
-        "runtime": {
-          "TileGame.Core.dll": {}
-        }
-      },
-      "TileGame.GeneralComponents/1.0.0": {
-        "dependencies": {
-          "TileGame.Core": "1.0.0"
-        },
-        "runtime": {
-          "TileGame.GeneralComponents.dll": {}
         }
       }
     }
@@ -184,6 +180,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Furesoft.Core/1.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1vbJ+C1bY6D/86hkrc+IHQ725wKtnYGWSWfg7sKI5WmY7CRCqQH4RAsmjpkhJgwe3OnsY6lfDArhqFXykravxw==",
+      "path": "furesoft.core/1.0.7",
+      "hashPath": "furesoft.core.1.0.7.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
+      "path": "microsoft.csharp/4.7.0",
+      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     },
     "MonoGame.Content.Builder.Task/3.8.1.303": {
       "type": "package",
@@ -248,22 +258,12 @@
       "path": "monogame.framework.desktopgl/3.8.1.303",
       "hashPath": "monogame.framework.desktopgl.3.8.1.303.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.3": {
+    "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
-      "path": "newtonsoft.json/12.0.3",
-      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
-    },
-    "TileGame.Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "TileGame.GeneralComponents/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     }
   }
 }

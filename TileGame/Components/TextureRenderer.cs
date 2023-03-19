@@ -1,10 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using TileGame.Core;
 
 namespace TileGame.Components;
 
-public class TextureRenderer : Component
+public class TextureRenderer : GameLoopComponent
 {
     private readonly Color _color;
 
@@ -22,8 +21,9 @@ public class TextureRenderer : Component
     {
         sb.Begin();
         
-        var texture = GameObject.GetComponent<TextureComponent>().Texture;
-        sb.Draw(texture, GameObject.Bounds, _color);
+        var position = Object.GetComponent<PositionComponent>();
+        var texture = Object.GetComponent<TextureComponent>().Texture;
+        sb.Draw(texture, position.Bounds, _color);
 
         sb.End();
     }

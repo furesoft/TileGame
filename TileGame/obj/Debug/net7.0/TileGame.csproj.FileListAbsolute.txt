@@ -111,10 +111,7 @@ C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\runtimes\win-x64
 C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\runtimes\win-x64\native\soft_oal.dll
 C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\runtimes\win-x86\native\SDL2.dll
 C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\runtimes\win-x86\native\soft_oal.dll
-C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\TileGame.Core.dll
-C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\TileGame.GeneralComponents.dll
-C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\TileGame.Core.pdb
-C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\TileGame.GeneralComponents.pdb
 C:\Users\chris\RiderProjects\TileGame\TileGame\obj\Debug\net7.0\TileGame.csproj.CopyComplete
 C:\Users\chris\RiderProjects\TileGame\TileGame\obj\Debug\net7.0\TileGame.genruntimeconfig.cache
 C:\Users\chris\RiderProjects\TileGame\TileGame\obj\Debug\net7.0\ref\TileGame.dll
+C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\Furesoft.Core.dll

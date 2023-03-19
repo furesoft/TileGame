@@ -2,11 +2,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using TileGame.Core;
 
 namespace TileGame.Components;
 
-public class DiceComponent : Component
+public class DiceComponent : GameLoopComponent
 {
     private SpriteFont _font;
     private Vector2 _position;
@@ -16,7 +15,9 @@ public class DiceComponent : Component
     public override void Initialize()
     {
         _font = Content.Load<SpriteFont>("Arial");
-        _position = GameObject.Position + new Vector2(GameObject.Size.Width/4, GameObject.Size.Height/4);
+
+        var position = Object.GetComponent<PositionComponent>();
+        _position = position.Position + new Vector2(position.Size.Width/4, position.Size.Height/4);
     }
 
     public int Number { get; set; }
@@ -24,7 +25,8 @@ public class DiceComponent : Component
     {
         sb.Begin();
         
-        sb.Draw(GameObject.GetComponent<TextureComponent>().Texture, GameObject.Bounds, Color.White);
+        var position = Object.GetComponent<PositionComponent>();
+        sb.Draw(Object.GetComponent<TextureComponent>().Texture, position.Bounds, Color.White);
         
         sb.DrawString(_font, Number.ToString(), _position, Color.Black);
         
@@ -36,14 +38,14 @@ public class DiceComponent : Component
     {
         var mouseState = Mouse.GetState();
         
-        if (!GameObject.IsMouseOverGameObject())
+        if (!Object.IsMouseOverGameObject())
         {
             return;
         }
         
         if (mouseState.LeftButton == ButtonState.Pressed)
         {
-            Number = Random.Shared.Next(1, 9);
+            Number = Random.Shared.Next(1, 6);
             hasRolled = true;
         }
         

@@ -1,19 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using TileGame.Core;
 
 namespace TileGame.Components;
 
-public class TileRenderer : Component
+public class TileRenderer : GameLoopComponent
 {
     public override void Render(SpriteBatch sb, GameTime gameTime)
     {
-        var selectable = GameObject.GetComponent<Selectable>();
+        var selectable = Object.GetComponent<Selectable>();
+        var position = Object.GetComponent<PositionComponent>();
 
         var color = selectable.IsSelected ? Color.White : Color.Black;
 
         sb.Begin();
-        sb.Draw(GameObject.GetComponent<TextureComponent>().Texture, GameObject.Bounds, color);
+        sb.Draw(Object.GetComponent<TextureComponent>().Texture, position.Bounds, color);
         sb.End();
     }
 }

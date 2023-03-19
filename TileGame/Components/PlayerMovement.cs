@@ -1,8 +1,6 @@
 ﻿using System.Linq;
+using Furesoft.Core.Componenting;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using TileGame.Core;
 
 namespace TileGame.Components;
 
@@ -16,16 +14,17 @@ public class PlayerMovement : Component
     public int TileIndex { get; set; }
     public void RefreshPosition()
     {
-        var playerTexture = GameObject.GetComponent<TextureComponent>().Texture;
+        var playerTexture = Object.GetComponent<TextureComponent>().Texture;
         
-        var childCenter = new Vector2(GameObject.Size.Width / 2 - playerTexture.Width / 2,
-            GameObject.Size.Height / 2 - playerTexture.Height / 2);
+        var position = Object.GetComponent<PositionComponent>();
+        var childCenter = new Vector2(position.Size.Width / 2 - playerTexture.Width / 2,
+            position.Size.Height / 2 - playerTexture.Height / 2);
 
-        var tiles = GameObject.GetRootParent().Children.Where(_=> _.Name == "Tile").ToArray();
+        var tiles = Object.GetRootParent().Children.Where(_=> _.Name == "Tile").ToArray();
 
         TileIndex++;
         TileIndex %= tiles.Length;
         
-        GameObject.Position = tiles[TileIndex].Position;
+        position.Position = tiles[TileIndex].GetComponent<PositionComponent>().Position + childCenter;
     }
 }

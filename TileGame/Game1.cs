@@ -1,10 +1,8 @@
-﻿using System.Linq;
+﻿using Furesoft.Core.Componenting;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using MonoGame.Extended;
 using TileGame.Components;
-using TileGame.Core;
 
 namespace TileGame;
 
@@ -19,24 +17,25 @@ public class Game1 : Game
         _graphics = new(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
-        Component.Content = Content;
+        GameLoopComponent.Content = Content;
     }
     
-    private void CreateTile(int x, int y, GameObject parent)
+    private void CreateTile(int x, int y, ComponentObject parent)
     {
         var tile = CreateGameObject("Tile");
-        tile.Position = new (x, y);
-        tile.Size = new Size(100, 100);
+        
+        tile.AddComponent(new PositionComponent(new(x, y), new(50,50)));
         tile.AddComponent(new TextureComponent("tile"));
         tile.AddComponent<TextureRenderer>();
         
         tile.SetParent(parent);
     }
 
-    private void CreatePlayer(GameObject tiles, Color color, int startIndex)
+    private void CreatePlayer(ComponentObject tiles, Color color, int startIndex)
     {
         var player = CreateGameObject("player");
-        player.Size = new(50, 50);
+        
+        player.AddComponent(new PositionComponent(new(), new(25,25)));
         player.AddComponent(new TextureComponent("player"));
         player.AddComponent(new TextureRenderer(color));
         player.AddComponent<PlayerMovement>();
@@ -54,12 +53,13 @@ public class Game1 : Game
         player.SetParent(tiles);
     }
 
-    private GameObject selectedPlayer;
+    private ComponentObject selectedPlayer;
     private void CreateDice()
     {
         var dice = CreateGameObject("dice");
-        dice.Size = new(50, 50);
-        dice.Position = new Vector2(GraphicsDevice.Viewport.Width -75, 25);
+
+        var position = new Vector2(GraphicsDevice.Viewport.Width -75, 25);
+        dice.AddComponent(new PositionComponent(position, new(50,50)));
         dice.AddComponent(new TextureComponent("dice"));
 
         var diceComponent = new DiceComponent();
@@ -74,9 +74,9 @@ public class Game1 : Game
         dice.AddComponent(diceComponent);
     }
 
-    private GameObject CreateGameObject(string name)
+    private ComponentObject CreateGameObject(string name)
     {
-        var go = new GameObject(name);
+        var go = new ComponentObject(name);
 
         _currentScene.Objects.Add(go);
 
@@ -85,20 +85,25 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
+        Window.AllowUserResizing = true;
+        Window.ClientSizeChanged += (s, e) =>
+        {
+            Draw(new());
+        };
         _spriteBatch = new(GraphicsDevice);
 
-        Component.Content = Content;
+        GameLoopComponent.Content = Content;
         
         var tiles = CreateGameObject("tiles");
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 5; i++)
         {
-            CreateTile(i+1 * (_currentScene.Objects.Count + 210*i), 10, tiles);
+            CreateTile( i+1 * (_currentScene.Objects.Count + 50*i), GraphicsDevice.Viewport.Height / 2 - 50, tiles);
         }
-        
+
         for (int i = 0; i < 4; i++)
         {
-            CreateTile(i+1 * (_currentScene.Objects.Count + 210*i), 200, tiles);
+            CreateTile(210, 250 + (i * 51), tiles);
         }
 
         CreatePlayer(tiles, Color.Red,0);

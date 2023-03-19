@@ -1,5 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using TileGame.Core;
+﻿using Furesoft.Core.Componenting;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace TileGame.Components;
 
@@ -10,12 +10,12 @@ public class TextureComponent : Component
     public TextureComponent(string name)
     {
         _name = name;
-        Texture = Content.Load<Texture2D>(_name);
+        Texture = GameLoopComponent.Content.Load<Texture2D>(_name);
     }
 
     public override void Initialize()
     {
-        Texture = Content.Load<Texture2D>(_name);
+        Texture = GameLoopComponent.Content.Load<Texture2D>(_name);
     }
 
     public Texture2D Texture { get; set; }
