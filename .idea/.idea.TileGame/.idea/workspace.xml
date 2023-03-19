@@ -7,123 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08753631-7f70-4f3b-a009-67d1a8cfeff1" name="Changes" comment="Cleanup">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TileGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TileGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/Component.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/GameObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/Scene.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/TileGame.Core.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/bin/Debug/net7.0/TileGame.Core.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/bin/Debug/net7.0/TileGame.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/bin/Debug/net7.0/TileGame.Core.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/TileGame.Core.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/ref/TileGame.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/Debug/net7.0/refint/TileGame.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/TileGame.Core.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame.Core/obj/TileGame.Core.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/TileGame.Core.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame.Core/obj/TileGame.Core.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/TileGame.Core.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame.Core/obj/TileGame.Core.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame.Core/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame.Core/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.Core/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/TileGame.GeneralComponents.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/bin/Debug/net7.0/TileGame.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/bin/Debug/net7.0/TileGame.Core.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/bin/Debug/net7.0/TileGame.GeneralComponents.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/bin/Debug/net7.0/TileGame.GeneralComponents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/bin/Debug/net7.0/TileGame.GeneralComponents.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/TileGame.GeneralComponents.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/ref/TileGame.GeneralComponents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/Debug/net7.0/refint/TileGame.GeneralComponents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/TileGame.GeneralComponents.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/TileGame.GeneralComponents.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/TileGame.GeneralComponents.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.GeneralComponents/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/Components/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Components/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/Components/PositionComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Components/PositionComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/Components/Selectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Components/Selectable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/Components/TextureComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Components/TextureComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/Components/TextureRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Components/TextureRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/Components/TileRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Components/TileRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Game1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/GameLoopComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/GameLoopComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/GameObjectExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/GameObjectExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/SceneExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/SceneExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/TileGame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/TileGame.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/Newtonsoft.Json.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.Core.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.Core.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.GeneralComponents.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.GeneralComponents.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/ref/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/ref/TileGame.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/refint/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/refint/TileGame.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/TileGame.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/TileGame.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TileGame/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/rider.project.restore.info" afterDir="false" />
-    </list>
+    <list default="true" id="08753631-7f70-4f3b-a009-67d1a8cfeff1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame.Core/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame.Core/Component.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame.Core/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame.Core/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame.Core/Scene.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/DiceComponent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/DiceComponent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/Selectable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/TextureComponent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/TextureRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/TextureRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/TileRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/TileRenderer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Game1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Game1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/GameLoopComponent.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/GameObjectExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="hbsv19lu" />
@@ -137,25 +25,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DebuggerViewTab_PTCS_FirstProportionKey": "0.3502052",
-    "DebuggerViewTab_PTCS_LastProportionKey": "0.0",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DebuggerViewTab_PTCS_FirstProportionKey&quot;: &quot;0.3502052&quot;,
+    &quot;DebuggerViewTab_PTCS_LastProportionKey&quot;: &quot;0.0&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\chris\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\chris\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\chris\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\chris\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\chris\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\chris\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TileGame" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.dll" />
@@ -187,7 +75,9 @@
       <workItem from="1676228861126" duration="451000" />
       <workItem from="1676269015630" duration="820000" />
       <workItem from="1676271588111" duration="658000" />
-      <workItem from="1679231000891" duration="3412000" />
+      <workItem from="1679231000891" duration="3769000" />
+      <workItem from="1679237121942" duration="68000" />
+      <workItem from="1679245062017" duration="1410000" />
     </task>
     <task id="LOCAL-00001" summary="Cleanup">
       <created>1679231994637</created>
@@ -217,7 +107,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679233045680</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cleanup">
+      <created>1679234999429</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679234999429</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: Update Packages">
+      <created>1679237183207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679237183207</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: Update Packages">
+      <created>1679246258133</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679246258133</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup" />
+    <MESSAGE value="chore: Update Packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: Update Packages" />
   </component>
 </project>

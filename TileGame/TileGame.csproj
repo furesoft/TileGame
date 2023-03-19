@@ -22,7 +22,8 @@
     <EmbeddedResource Include="Icon.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Furesoft.Core" Version="1.0.7" />
+    <PackageReference Include="Furesoft.Core" Version="1.0.8" />
+    <PackageReference Include="Furesoft.Core.Componenting.MonoGame" Version="1.0.1" />
     <PackageReference Include="MonoGame.Extended.Animations" Version="3.7.0" />
     <PackageReference Include="MonoGame.Extended.Collisions" Version="3.8.0" />
     <PackageReference Include="MonoGame.Extended.Graphics" Version="3.8.0" />

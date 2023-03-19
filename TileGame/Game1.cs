@@ -1,4 +1,5 @@
 ﻿using Furesoft.Core.Componenting;
+using Furesoft.Core.Componenting.MonoGame.Components;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -17,14 +18,15 @@ public class Game1 : Game
         _graphics = new(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
-        GameLoopComponent.Content = Content;
+        
+        Furesoft.Core.Componenting.MonoGame.GameComponent.Content = Content;
     }
     
     private void CreateTile(int x, int y, ComponentObject parent)
     {
         var tile = CreateGameObject("Tile");
         
-        tile.AddComponent(new PositionComponent(new(x, y), new(50,50)));
+        tile.AddComponent(new Transform(new(x, y), new(50,50)));
         tile.AddComponent(new TextureComponent("tile"));
         tile.AddComponent<TextureRenderer>();
         
@@ -35,7 +37,7 @@ public class Game1 : Game
     {
         var player = CreateGameObject("player");
         
-        player.AddComponent(new PositionComponent(new(), new(25,25)));
+        player.AddComponent(new Transform(new(), new(25,25)));
         player.AddComponent(new TextureComponent("player"));
         player.AddComponent(new TextureRenderer(color));
         player.AddComponent<PlayerMovement>();
@@ -59,7 +61,7 @@ public class Game1 : Game
         var dice = CreateGameObject("dice");
 
         var position = new Vector2(GraphicsDevice.Viewport.Width -75, 25);
-        dice.AddComponent(new PositionComponent(position, new(50,50)));
+        dice.AddComponent(new Transform(position, new(50,50)));
         dice.AddComponent(new TextureComponent("dice"));
 
         var diceComponent = new DiceComponent();
@@ -92,7 +94,7 @@ public class Game1 : Game
         };
         _spriteBatch = new(GraphicsDevice);
 
-        GameLoopComponent.Content = Content;
+        Furesoft.Core.Componenting.MonoGame.GameComponent.Content = Content;
         
         var tiles = CreateGameObject("tiles");
 

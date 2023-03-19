@@ -1,11 +1,12 @@
 ﻿using System;
+using Furesoft.Core.Componenting.MonoGame.Components;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace TileGame.Components;
 
-public class DiceComponent : GameLoopComponent
+public class DiceComponent : Furesoft.Core.Componenting.MonoGame.GameComponent
 {
     private SpriteFont _font;
     private Vector2 _position;
@@ -16,8 +17,9 @@ public class DiceComponent : GameLoopComponent
     {
         _font = Content.Load<SpriteFont>("Arial");
 
-        var position = Object.GetComponent<PositionComponent>();
-        _position = position.Position + new Vector2(position.Size.Width/4, position.Size.Height/4);
+        var position = Object.GetComponent<Transform>();
+        _position = position.Position + new Vector2(position.Size.X/4,
+            position.Size.Y/4);
     }
 
     public int Number { get; set; }
@@ -25,7 +27,7 @@ public class DiceComponent : GameLoopComponent
     {
         sb.Begin();
         
-        var position = Object.GetComponent<PositionComponent>();
+        var position = Object.GetComponent<Transform>();
         sb.Draw(Object.GetComponent<TextureComponent>().Texture, position.Bounds, Color.White);
         
         sb.DrawString(_font, Number.ToString(), _position, Color.Black);

@@ -113,7 +113,11 @@
           "dependencies": {
             "Furesoft.Core": {
               "target": "Package",
-              "version": "[1.0.7, )"
+              "version": "[1.0.8, )"
+            },
+            "Furesoft.Core.Componenting.MonoGame": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             },
             "MonoGame.Content.Builder.Task": {
               "target": "Package",

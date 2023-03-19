@@ -1,8 +1,8 @@
 using Furesoft.Core.Componenting;
+using Furesoft.Core.Componenting.MonoGame.Components;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using TileGame.Components;
 
 namespace TileGame;
 
@@ -14,7 +14,7 @@ public static class GameObjectExtensions
         {
             var component = gameObject.Components[i];
             
-            if (component.Enabled && component is GameLoopComponent gameLoopComponent)
+            if (component.Enabled && component is Furesoft.Core.Componenting.MonoGame.GameComponent gameLoopComponent)
             {
                 gameLoopComponent.Update(gameTime);
             }
@@ -27,7 +27,7 @@ public static class GameObjectExtensions
         {
             var component = gameObject.Components[i];
             
-            if (component.Visible && component is GameLoopComponent gameLoopComponent)
+            if (component.Visible && component is Furesoft.Core.Componenting.MonoGame.GameComponent gameLoopComponent)
             {
                 gameLoopComponent.Render(sb, gameTime);
             }
@@ -38,6 +38,6 @@ public static class GameObjectExtensions
     {
         var mouseState = Mouse.GetState();
 
-        return gameObject.GetComponent<PositionComponent>().Bounds.Contains(mouseState.Position);
+        return gameObject.GetComponent<Transform>().Bounds.Contains(mouseState.Position);
     }
 }

@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Furesoft.Core/1.0.7": {
+      "Furesoft.Core/1.0.8": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -13,6 +13,19 @@
         },
         "runtime": {
           "lib/net7.0/Furesoft.Core.dll": {}
+        }
+      },
+      "Furesoft.Core.Componenting.MonoGame/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Furesoft.Core": "1.0.8",
+          "MonoGame.Framework.DesktopGL": "3.8.1.303"
+        },
+        "compile": {
+          "lib/net7.0/Furesoft.Core.Componenting.MonoGame.dll": {}
+        },
+        "runtime": {
+          "lib/net7.0/Furesoft.Core.Componenting.MonoGame.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {
@@ -195,16 +208,28 @@
     }
   },
   "libraries": {
-    "Furesoft.Core/1.0.7": {
-      "sha512": "1vbJ+C1bY6D/86hkrc+IHQ725wKtnYGWSWfg7sKI5WmY7CRCqQH4RAsmjpkhJgwe3OnsY6lfDArhqFXykravxw==",
+    "Furesoft.Core/1.0.8": {
+      "sha512": "RSWZdhQTHaLCPU1PgjWWGinp7TJEmnoLUJZ78A5BRrvMbF/P5l/3BF+p+KOqXwpio8PGTfufViEzYrllh9Vrhw==",
       "type": "package",
-      "path": "furesoft.core/1.0.7",
+      "path": "furesoft.core/1.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "furesoft.core.1.0.7.nupkg.sha512",
+        "furesoft.core.1.0.8.nupkg.sha512",
         "furesoft.core.nuspec",
         "lib/net7.0/Furesoft.Core.dll"
+      ]
+    },
+    "Furesoft.Core.Componenting.MonoGame/1.0.1": {
+      "sha512": "YEbAFU3u4b93rbC7yZH98vTurR4utfWlfNrQ1fAmn677H8pMdyDCehJpNrDvBToImQq+m7DkZxH8xgIOlupj3g==",
+      "type": "package",
+      "path": "furesoft.core.componenting.monogame/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "furesoft.core.componenting.monogame.1.0.1.nupkg.sha512",
+        "furesoft.core.componenting.monogame.nuspec",
+        "lib/net7.0/Furesoft.Core.Componenting.MonoGame.dll"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -458,7 +483,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Furesoft.Core >= 1.0.7",
+      "Furesoft.Core >= 1.0.8",
+      "Furesoft.Core.Componenting.MonoGame >= 1.0.1",
       "MonoGame.Content.Builder.Task >= 3.8.1.303",
       "MonoGame.Extended.Animations >= 3.7.0",
       "MonoGame.Extended.Collisions >= 3.8.0",
@@ -522,7 +548,11 @@
         "dependencies": {
           "Furesoft.Core": {
             "target": "Package",
-            "version": "[1.0.7, )"
+            "version": "[1.0.8, )"
+          },
+          "Furesoft.Core.Componenting.MonoGame": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "MonoGame.Content.Builder.Task": {
             "target": "Package",
