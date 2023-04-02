@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "TileGame/1.0.0": {
         "dependencies": {
-          "Furesoft.Core": "1.0.7",
+          "Furesoft.Core": "1.0.9",
+          "Furesoft.Core.Componenting.MonoGame": "1.0.4",
           "MonoGame.Content.Builder.Task": "3.8.1.303",
           "MonoGame.Extended.Animations": "3.7.0",
           "MonoGame.Extended.Collisions": "3.8.0",
@@ -23,15 +24,27 @@
           "TileGame.dll": {}
         }
       },
-      "Furesoft.Core/1.0.7": {
+      "Furesoft.Core/1.0.9": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/net7.0/Furesoft.Core.dll": {
-            "assemblyVersion": "1.0.7.0",
-            "fileVersion": "1.0.7.0"
+            "assemblyVersion": "1.0.9.0",
+            "fileVersion": "1.0.9.0"
+          }
+        }
+      },
+      "Furesoft.Core.Componenting.MonoGame/1.0.4": {
+        "dependencies": {
+          "Furesoft.Core": "1.0.9",
+          "MonoGame.Framework.DesktopGL": "3.8.1.303"
+        },
+        "runtime": {
+          "lib/net7.0/Furesoft.Core.Componenting.MonoGame.dll": {
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
           }
         }
       },
@@ -181,12 +194,19 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Furesoft.Core/1.0.7": {
+    "Furesoft.Core/1.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1vbJ+C1bY6D/86hkrc+IHQ725wKtnYGWSWfg7sKI5WmY7CRCqQH4RAsmjpkhJgwe3OnsY6lfDArhqFXykravxw==",
-      "path": "furesoft.core/1.0.7",
-      "hashPath": "furesoft.core.1.0.7.nupkg.sha512"
+      "sha512": "sha512-BlTzbyeuIJBkWYn91cU++mhvLWGtIMUaoXoKhcBMFFqHW3wfnnK1o2eyRm6oueibuAA1ZBhOeMQRqD6lD8Htdw==",
+      "path": "furesoft.core/1.0.9",
+      "hashPath": "furesoft.core.1.0.9.nupkg.sha512"
+    },
+    "Furesoft.Core.Componenting.MonoGame/1.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ut/xSeoqCcOTJyDP/uTOP5U6NSITUIKuPkwVIRIMnxhL4H3LP6kh1Q3iaUP+QfgBvhb0RMjNR5MmoL4vCoqgqA==",
+      "path": "furesoft.core.componenting.monogame/1.0.4",
+      "hashPath": "furesoft.core.componenting.monogame.1.0.4.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",

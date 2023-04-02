@@ -1,4 +1,6 @@
-﻿using Furesoft.Core.Componenting;
+﻿using System.Diagnostics;
+using Furesoft.Core.Componenting;
+using Furesoft.Core.Componenting.MonoGame;
 using Furesoft.Core.Componenting.MonoGame.Components;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,9 +12,16 @@ namespace TileGame;
 public class Game1 : Game
 {
     public static GraphicsDeviceManager _graphics;
-    private SpriteBatch _spriteBatch;
     private Scene _currentScene = new();
 
+    class PlayerSelection : Component, ISelection
+    {
+        public void OnSelect(ComponentObject obj)
+        {
+            Game1.selectedPlayer = obj;
+        }
+    }
+    
     public Game1()
     {
         _graphics = new(this);
@@ -26,42 +35,48 @@ public class Game1 : Game
     {
         var tile = CreateGameObject("Tile");
         
-        tile.AddComponent(new Transform(new(x, y), new(50,50)));
+        tile.AddComponent(new TransformComponent(new(x, y), new(50,50)));
         tile.AddComponent(new TextureComponent("tile"));
         tile.AddComponent<TextureRenderer>();
         
         tile.SetParent(parent);
     }
 
+    class PlayerCollision : Component, ICollision
+    {
+        public void OnCollide(ComponentObject obj)
+        {
+            Debug.WriteLine(obj.Name + " has collided");
+        }
+    }
+    
     private void CreatePlayer(ComponentObject tiles, Color color, int startIndex)
     {
         var player = CreateGameObject("player");
         
-        player.AddComponent(new Transform(new(), new(25,25)));
+        player.AddComponent(new TransformComponent(new(), new(25,25)));
         player.AddComponent(new TextureComponent("player"));
         player.AddComponent(new TextureRenderer(color));
         player.AddComponent<PlayerMovement>();
         player.AddComponent<Selectable>();
+        player.AddComponent<PlayerCollision>();
 
         var movement = player.GetComponent<PlayerMovement>();
         movement.TileIndex = startIndex;
 
-        var selectable = player.GetComponent<Selectable>();
-        selectable.OnSelect += so =>
-        {
-            selectedPlayer = so;
-        };
+        player.AddComponent<PlayerSelection>();
+        player.AddComponent<Collider>();
 
         player.SetParent(tiles);
     }
 
-    private ComponentObject selectedPlayer;
+    private static ComponentObject selectedPlayer;
     private void CreateDice()
     {
         var dice = CreateGameObject("dice");
 
         var position = new Vector2(GraphicsDevice.Viewport.Width -75, 25);
-        dice.AddComponent(new Transform(position, new(50,50)));
+        dice.AddComponent(new TransformComponent(position, new(50,50)));
         dice.AddComponent(new TextureComponent("dice"));
 
         var diceComponent = new DiceComponent();
@@ -73,6 +88,8 @@ public class Game1 : Game
             movement.RefreshPosition();
         };
         
+        dice.AddComponent<MouseAttach>();
+        dice.AddComponent<Collider>();
         dice.AddComponent(diceComponent);
     }
 
@@ -80,7 +97,7 @@ public class Game1 : Game
     {
         var go = new ComponentObject(name);
 
-        _currentScene.Objects.Add(go);
+        _currentScene.Add(go);
 
         return go;
     }
@@ -92,7 +109,6 @@ public class Game1 : Game
         {
             Draw(new());
         };
-        _spriteBatch = new(GraphicsDevice);
 
         Furesoft.Core.Componenting.MonoGame.GameComponent.Content = Content;
         

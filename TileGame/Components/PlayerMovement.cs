@@ -17,7 +17,7 @@ public class PlayerMovement : Furesoft.Core.Componenting.MonoGame.GameComponent
     {
         var playerTexture = Object.GetComponent<TextureComponent>().Texture;
         
-        var position = Object.GetComponent<Transform>();
+        var position = Object.GetComponent<TransformComponent>();
         var childCenter = new Vector2(position.Size.X / 2 - playerTexture.Width / 2,
             position.Size.Y / 2 - playerTexture.Height / 2);
 
@@ -26,6 +26,6 @@ public class PlayerMovement : Furesoft.Core.Componenting.MonoGame.GameComponent
         TileIndex++;
         TileIndex %= tiles.Length;
         
-        position.Position = tiles[TileIndex].GetComponent<Transform>().Position + childCenter;
+        position.Position = tiles[TileIndex].GetComponent<TransformComponent>().Position + childCenter;
     }
 }

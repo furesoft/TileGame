@@ -115,3 +115,4 @@ C:\Users\chris\RiderProjects\TileGame\TileGame\obj\Debug\net7.0\TileGame.csproj.
 C:\Users\chris\RiderProjects\TileGame\TileGame\obj\Debug\net7.0\TileGame.genruntimeconfig.cache
 C:\Users\chris\RiderProjects\TileGame\TileGame\obj\Debug\net7.0\ref\TileGame.dll
 C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\Furesoft.Core.dll
+C:\Users\chris\RiderProjects\TileGame\TileGame\bin\Debug\net7.0\Furesoft.Core.Componenting.MonoGame.dll

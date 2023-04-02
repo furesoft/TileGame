@@ -7,11 +7,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08753631-7f70-4f3b-a009-67d1a8cfeff1" name="Changes" comment="" />
+    <list default="true" id="08753631-7f70-4f3b-a009-67d1a8cfeff1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TileGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TileGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/Components/DiceComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Components/DiceComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/Game1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/TileGame.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/TileGame.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/bin/Debug/net7.0/TileGame.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/TileGame.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/ref/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/ref/TileGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/refint/TileGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/Debug/net7.0/refint/TileGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/TileGame.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/TileGame.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TileGame/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/TileGame/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Documents/Projekte/Furesoft.Core/Furesoft.Core.Componenting.MonoGame/Components/Collider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/chris/RiderProjects/TileGame/TileGame/Components/DiceComponent.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="hbsv19lu" />
@@ -78,6 +102,9 @@
       <workItem from="1679231000891" duration="3769000" />
       <workItem from="1679237121942" duration="68000" />
       <workItem from="1679245062017" duration="1410000" />
+      <workItem from="1679247363860" duration="217000" />
+      <workItem from="1680279468147" duration="612000" />
+      <workItem from="1680422410737" duration="2202000" />
     </task>
     <task id="LOCAL-00001" summary="Cleanup">
       <created>1679231994637</created>
@@ -128,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679246258133</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="chore: Update Packages">
+      <created>1679247568679</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679247568680</updated>
+    </task>
+    <task id="LOCAL-00009" summary="chore(deps): Update Packages">
+      <created>1680423296321</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680423296321</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +181,52 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Cleanup" />
     <MESSAGE value="chore: Update Packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: Update Packages" />
+    <MESSAGE value="chore(deps): Update Packages" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(deps): Update Packages" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TileGame/Game1.cs</url>
+          <line>48</line>
+          <properties documentPath="C:\Users\chris\RiderProjects\TileGame\TileGame\Game1.cs" initialLine="48" containingFunctionPresentation="method 'OnCollide'">
+            <startOffsets>
+              <option value="1319" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1363" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$USER_HOME$/Documents/Projekte/Furesoft.Core/Furesoft.Core.Componenting.MonoGame/Components/Collider.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\Users\chris\Documents\Projekte\Furesoft.Core\Furesoft.Core.Componenting.MonoGame\Components\Collider.cs" initialLine="42" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="926" />
+            </startOffsets>
+            <endOffsets>
+              <option value="976" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$USER_HOME$/Documents/Projekte/Furesoft.Core/Furesoft.Core.Componenting.MonoGame/Components/Collider.cs</url>
+          <line>32</line>
+          <properties documentPath="C:\Users\chris\Documents\Projekte\Furesoft.Core\Furesoft.Core.Componenting.MonoGame\Components\Collider.cs" initialLine="32" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="690" />
+            </startOffsets>
+            <endOffsets>
+              <option value="726" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

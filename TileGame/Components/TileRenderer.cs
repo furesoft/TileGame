@@ -9,7 +9,7 @@ public class TileRenderer : Furesoft.Core.Componenting.MonoGame.GameComponent
     public override void Render(SpriteBatch sb, GameTime gameTime)
     {
         var selectable = Object.GetComponent<Selectable>();
-        var position = Object.GetComponent<Transform>();
+        var position = Object.GetComponent<TransformComponent>();
 
         var color = selectable.IsSelected ? Color.White : Color.Black;
 
